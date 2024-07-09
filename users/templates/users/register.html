@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load tailwind_filters %}
+
+{% block content %}
+<h1 class="text-2xl font-bold text-gray-900 sm:text-3xl">Registrarse</h1><br>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+
+    <div style="text-align: center; padding-bottom: 20px;">
+        <button class="inline-block rounded bg-indigo-600 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500" type="submit">Register</button>
+    </div>
+
+    </form>
+{% endblock content %}

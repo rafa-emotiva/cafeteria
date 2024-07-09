@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Cofee Shop</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <div class="container mx-auto px-4">
+            {% block content %}{% endblock content %}
+        </div>
+        {% comment %} {% if user.is_authenticated %}
+            <form action="{% url "logout" %}" method="post">
+                <div style="text-align: center; padding-bottom: 20px;">
+                    <button type="submit" class="inline-block rounded bg-indigo-600 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500">
+                        Cerrar sesión
+                    </button>
+                </div>
+            </form>
+        {% endif %} {% endcomment %}
+    </body>
+</html>
